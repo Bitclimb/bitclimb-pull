@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const args = process.argv;
+const api = require('../index');
+
+const argsparse = argarr => {
+  argarr = argarr.slice(2);
+  if (!argarr.length) {
+    return console.error('Missing paramaters');
+  }
+  if (argarr[0] !== 'set') {
+    api.pull(argarr);
+  } else {
+    if (argarr.length < 3) {
+      console.error('Missing paramters, needs 3, you only entered ', argarr.length);
+    }
+    api.set(argarr[1], argarr[2]);
+  }
+};
+argsparse(args);

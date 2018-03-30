@@ -1,0 +1,15 @@
+{
+  "name": "bitclimb-pull",
+  "version": "1.0.0",
+  "description": "Simple cli for updating/syncing production environments from github repos",
+  "main": "index.js",
+  "bin": {
+    "bcl-pull": "./bin/bcl-pull"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "unibtc@gmail.com",
+  "license": "MIT",
+  "dependencies": {}
+}
